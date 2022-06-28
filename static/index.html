@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document222</title>
+</head>
+<body>
+    <div id="root">
+        <div class="nihao">wode</div>
+        <div class="nihao">shijie</div>
+        <div id="container"></div>
+        <div class="hello">
+            <div class="a">aaa</div>
+            <div class="a">bb</div>
+        </div>
+
+        <div class="world">
+            <p class="b">bb</p>
+            <p class="b">bb</p>
+        </div>
+
+        <script>
+            function sleep(ms){
+                var start=Date.now(),end = start+ms;
+                while(Date.now() < end);
+                return;
+            }
+            // sleep(5000);
+        </script>
+
+        <!-- <iframe src="http://127.0.0.1:5500/static/iframe.html" frameborder="0"></iframe> -->
+
+        <form id="my-form" action="http://www.baidu.com" method="get">
+            <input type="text" name="username">
+            <input type="text" name="password">
+            <input type="submit" id="submit" class="submit" />
+        </form>
+    </div>
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $.get('https://www.fastmock.site/mock/6f9ba2ee35c84b524b82b45ff6641351/api/api/delay',{}, (res) => {
+            console.log(res)
+            const url = 'https://www.baidu.com/img/flexible/logo/pc/result@2.png';
+            // $('#container').html(`<img src="${url}">`)
+            $('#container').html(`<span id="myspan">我是一个Span</span>`)
+
+        })
+    </script>
+</body>
+</html>
